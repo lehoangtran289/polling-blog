@@ -2,25 +2,25 @@ import React, { Component } from "react";
 import "./App.css";
 
 class AppNavbar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-            value: '',
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+    //         value: '',
+    //     };
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+	// }
 
-	handleChange(event) {
-		this.setState({ 
-            value: event.target.value 
-        });
-    }
+	// handleChange(event) {
+	// 	this.setState({ 
+    //         value: event.target.value 
+    //     });
+    // }
     
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-      }
+    // handleSubmit(event) {
+    //     alert('A name was submitted: ' + this.state.value);
+    //     event.preventDefault();
+    // }
 
 	render() {
 		return (
@@ -40,7 +40,7 @@ class AppNavbar extends React.Component {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarsExampleDefault">
-					<ul className="navbar-nav mr-auto">
+					<ul className="navbar-nav ml-auto">
 						<li className="nav-item active">
 							<a className="nav-link my-2 my-lg-0" href="/posts">
 								<div className="Home">Home</div> <span className="sr-only">(current)</span>
@@ -51,13 +51,18 @@ class AppNavbar extends React.Component {
 								Add a post
 							</a>
 						</li>
+						<li className="nav-item">
+							<a className="nav-link" href="/search">
+								Search
+							</a>
+						</li>
 					</ul>
-					<form className="form-inline mt-2 mt-md-0" onSubmit={this.handleSubmit}>
+					{/* <form className="form-inline mt-2 mt-md-0" onSubmit={this.handleSubmit}>
 						<input class="form-control mr-sm-2" type="text" placeholder="Search a post" onChange={this.handleChange} />
 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
 							Search
 						</button>
-					</form>
+					</form>  */}
 				</div>
 			</div>
 		);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import PostDataService from "../Services/PostDataService";
+import AppNavbar from "../AppNavbar";
 
 class PostComponent extends Component {
 	constructor(props) {
@@ -64,8 +65,9 @@ class PostComponent extends Component {
 		let content = this.state.content;
 		return (
 			<div>
-				<h3>Post Details</h3>
-				<div className="container">
+				<AppNavbar/>
+				<div className="container mt-4">
+					<h3>Post Details</h3>
 					<Formik
 						initialValues={{ id, content }}
 						enableReinitialize={true}
@@ -92,6 +94,9 @@ class PostComponent extends Component {
 								</fieldset>
 								<button className="btn btn-success" type="submit">
 									Save
+								</button>
+								<button className="btn btn-light" onClick={() => {this.props.history.push(`/posts`)}}>
+									Cancel
 								</button>
 							</Form>
 						)}
