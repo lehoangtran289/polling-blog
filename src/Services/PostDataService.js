@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = "https://post-managing-app.herokuapp.com/api"
+const url = "http://localhost:8080/api"
 
 
 class PostDataService {
