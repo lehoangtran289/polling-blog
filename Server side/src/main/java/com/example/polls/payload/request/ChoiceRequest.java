@@ -1,0 +1,15 @@
+package com.example.polls.payload.request;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ChoiceRequest {
+	@NotBlank
+	@Size(max = 40)
+	private String text;
+}

@@ -1,10 +1,3 @@
-# polling-app
-
-a polling app which was implemented by Spring Boot, Spring Security, jwt and ReactJS
-allow users to create and vote in created polls
-
-definitely gonna update this in the future 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
